@@ -17,6 +17,9 @@ main {
   align-items: center;
   max-width: 800px;
   margin-inline: auto;
+  gap: 0.5rem;
+
+  /* border: 1px solid red; */
 }
 
 main > div {
@@ -37,15 +40,14 @@ main > div {
 #img__container-img {
   height: auto;
   max-width: 60%;
-  min-width: 200px;
+  min-width: 230px;
 
   border-radius: 100%;
- 
 }
 
 #img__container-text {
   font-weight: bold;
-  font-size: .7rem;
+  font-size: 0.7rem;
 }
 
 .text__container {
@@ -68,20 +70,48 @@ main > div {
   font-size: 0.9rem;
 }
 
-
 button {
-    padding: 10px 35px;
-    margin-top: .8rem;
-    background-color: black;
-    cursor: pointer;
-    border: 1px solid black;
-    border-radius: 3px;
-    font-weight: bold;
-    transition: .3s;
-    color: white;
+  padding: 10px 35px;
+  margin-top: 0.8rem;
+  background-color: black;
+  cursor: pointer;
+  border: 1px solid black;
+  border-radius: 3px;
+  font-weight: bold;
+  transition: 0.3s;
+  color: white;
 }
 
 button:hover {
-    background-color: transparent;
-    color: black;
+  background-color: transparent;
+  color: black;
+}
+
+@media (max-width: 725px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+    padding-inline: .5rem;
+  }
+
+  .img__container {
+    position: initial;
+    left: initial;
+    margin-bottom: 1rem;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  #img__container-img {
+    min-width: 150px;
+    max-width: 300px;
+    width: 100%;
+  }
+
+  main > div {
+    width: initial;
+  }
+
 }
